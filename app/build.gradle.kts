@@ -16,7 +16,7 @@ android {
     }
 
     buildFeatures { compose = true }
-    composeOptions { kotlinCompilerExtensionVersion = "1.5.8" }
+    implementation("com.github.arthenica:ffmpeg-kit-full:6.0-2.LTS")
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
