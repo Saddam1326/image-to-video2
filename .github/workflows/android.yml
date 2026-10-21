@@ -17,12 +17,12 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           
-      - name: Build with Gradle
-        uses: gradle/gradle-build-action@v3
-        with:
-          gradle-version: 8.6
-          arguments: assembleDebug --no-daemon
-          
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        
+      - name: Build APK
+        run: gradle wrapper --gradle-version 8.6 && ./gradlew assembleDebug --no-daemon
+        
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
