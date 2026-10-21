@@ -16,7 +16,7 @@ android {
     }
 
     buildFeatures { compose = true }
-    implementation("com.github.arthenica:ffmpeg-kit-full:6.0-2.LTS")
+    composeOptions { kotlinCompilerExtensionVersion = "1.5.8" }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -35,7 +35,7 @@ dependencies {
     implementation("androidx.compose.ui:ui:1.6.0")
     implementation("androidx.compose.material3:material3:1.2.0")
     implementation("androidx.compose.ui:ui-tooling-preview:1.6.0")
-    implementation("com.arthenica:ffmpeg-kit-full:6.0-2.LTS")
+    implementation("com.github.arthenica:ffmpeg-kit-full:6.0-2.LTS")
     implementation("org.opencv:opencv:4.10.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
 }
